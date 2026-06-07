@@ -1,0 +1,49 @@
+/*
+Theme Name: Mercado Connecting 2026
+Theme URI: https://mercadoconnecting.com
+Author: Mercado Connecting
+Version: 2026.1.0
+License: GNU General Public License v2 or later
+Text Domain: mercado-connecting
+Tags: e-commerce, responsive, one-page
+*/
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Inter','Helvetica Neue',Arial,sans-serif;background:#0a0a0a;color:#e0e0e0;min-width:320px;overflow-x:hidden}
+img,video,iframe{max-width:100%;height:auto;display:block}
+a{text-decoration:none;color:inherit}
+:root{--yellow:#FFD700;--dark:#0a0a0a;--text:#e0e0e0;--text-muted:#888;--radius:16px;--transition:0.3s ease}
+nav{position:fixed;top:0;left:0;right:0;z-index:1000;display:flex;align-items:center;justify-content:space-between;padding:16px 40px;background:rgba(10,10,10,0.95);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,215,0,0.1)}
+.nav-links{display:flex;gap:28px;list-style:none}
+.nav-links a{color:var(--text);font-size:0.9rem;font-weight:500;transition:color var(--transition)}
+.nav-links a:hover{color:var(--yellow)}
+.nav-cta{background:var(--yellow);color:#000;font-weight:700;padding:10px 24px;border-radius:50px;font-size:0.9rem;transition:transform var(--transition),box-shadow var(--transition)}
+.nav-cta:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(255,215,0,0.4)}
+section.prensa{position:relative;overflow:hidden;min-height:400px;padding:80px 0}
+section.prensa>*:not(#prensa-canvas):not(.media-symbol){position:relative;z-index:2}
+#prensa-canvas{position:absolute;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:0}
+.prensa-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(260px,100%),1fr));gap:20px;padding:0 40px;margin-top:40px}
+.prensa-card{background:rgba(255,255,255,0.05);border:1px solid rgba(255,215,0,0.15);border-radius:var(--radius);padding:24px;transition:transform var(--transition),box-shadow var(--transition);cursor:pointer}
+.prensa-card:hover{transform:translateY(-6px) scale(1.03);box-shadow:0 12px 40px rgba(255,215,0,0.25)}
+.prensa-card .tag{font-size:0.7rem;font-weight:700;letter-spacing:3px;color:var(--text-muted);text-transform:uppercase;margin-bottom:12px}
+.prensa-card h4{font-size:1rem;font-weight:600;color:var(--text);line-height:1.4}
+.media-symbol{position:absolute;pointer-events:none;z-index:1;filter:drop-shadow(0 0 8px rgba(255,215,0,0.5))}
+@keyframes floatSymbol{0%{opacity:0;transform:translateY(0) scale(0.8) rotate(0deg)}10%{opacity:0.35}90%{opacity:0.35}100%{opacity:0;transform:translateY(-120px) scale(1.1) rotate(20deg)}}
+.quote-text{font-size:clamp(18px,3vw,28px);font-style:italic;text-align:center;line-height:1.6}
+.aw{display:inline-block}
+.aw.gold{color:var(--yellow)}
+@keyframes wordFadeIn{0%{opacity:0;transform:translateY(25px) scale(0.8);filter:blur(6px)}60%{opacity:1;transform:translateY(-5px) scale(1.06);filter:blur(0)}100%{opacity:1;transform:translateY(0) scale(1);filter:blur(0)}}
+@keyframes glowPulse{0%,100%{text-shadow:0 0 10px rgba(255,215,0,0.3),0 0 20px rgba(255,215,0,0.1)}50%{text-shadow:0 0 25px rgba(255,215,0,0.9),0 0 50px rgba(255,215,0,0.5)}}
+footer{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:20px;padding:40px;background:#050505;border-top:1px solid rgba(255,215,0,0.1)}
+.footer-links{display:flex;flex-wrap:wrap;gap:20px}
+.footer-links a{color:var(--text-muted);font-size:0.875rem;transition:color var(--transition)}
+.footer-links a:hover{color:var(--yellow)}
+.footer-copy{color:var(--text-muted);font-size:0.8rem}
+.wa-btn{position:fixed;bottom:24px;right:24px;z-index:9999;width:56px;height:56px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(37,211,102,0.4);transition:transform var(--transition)}
+.wa-btn:hover{transform:scale(1.12)}
+.btn-primary{display:inline-block;background:var(--yellow);color:#000;font-weight:700;padding:14px 32px;border-radius:50px;transition:transform var(--transition)}
+.btn-primary:hover{transform:translateY(-3px);box-shadow:0 10px 30px rgba(255,215,0,0.4)}
+.reveal{opacity:0;transform:translateY(30px);transition:opacity 0.6s ease,transform 0.6s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+a:focus-visible,button:focus-visible{outline:2px solid var(--yellow);outline-offset:4px}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:0.01ms!important;transition-duration:0.01ms!important}#prensa-canvas,.media-symbol{display:none}}
