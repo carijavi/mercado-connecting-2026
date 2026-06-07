@@ -1,0 +1,14 @@
+/* Mercado Connecting 2026 - Responsive CSS */
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{min-width:320px;overflow-x:hidden}
+img,video{max-width:100%;height:auto}
+.prensa-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(260px,100%),1fr));gap:clamp(12px,2vw,24px);padding:0 clamp(16px,3vw,32px)}
+.quote-text{font-size:clamp(16px,3vw,28px)!important}
+footer{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:20px}
+@media(max-width:480px){.nav-links,.nav-cta{display:none}.prensa-cards{grid-template-columns:1fr}footer{flex-direction:column;text-align:center}#prensa-canvas{display:none}}
+@media(min-width:481px) and (max-width:768px){.prensa-cards{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:769px) and (max-width:1200px){.prensa-cards{grid-template-columns:repeat(3,1fr)}}
+@media(min-width:1201px){.prensa-cards{grid-template-columns:repeat(4,1fr)};nav{padding:18px 60px};footer{padding:50px 60px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}#prensa-canvas{display:none}}
+@media print{#prensa-canvas,.wa-btn,.media-symbol{display:none!important}body{background:#fff;color:#000}}
